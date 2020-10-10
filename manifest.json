@@ -1,0 +1,80 @@
+{
+    "schema": "1.0",
+    "details": {
+        "displayName": "iPad Pal",
+        "description": "Allows you to select enrollment profiles prior to provisioning.",
+        "createdTime": "2020-10-10T01:16:29.6655778Z",
+        "packageTelemetryId": "32b7fa5a-253a-41c8-af30-ed266aa55a01",
+        "creator": "Williams, Jay",
+        "sourceEnvironment": "iPad Enrollment Project"
+    },
+    "resources": {
+        "7a026bfd-3fdb-4e88-95e5-10bc7f42633d": {
+            "type": "Microsoft.PowerApps/apps",
+            "suggestedCreationType": "New",
+            "creationType": "New, Update",
+            "details": {
+                "displayName": "iPad Pal"
+            },
+            "configurableBy": "User",
+            "dependsOn": [
+                "4760893c-1c4c-405c-81d1-e5259ec06d5f",
+                "5b1c9eb8-758a-49b5-89a1-692e0e7374c2",
+                "fed4cbfa-dac7-45d1-bc39-f1322cb94db5"
+            ]
+        },
+        "4760893c-1c4c-405c-81d1-e5259ec06d5f": {
+            "type": "Microsoft.PowerApps/apis",
+            "suggestedCreationType": "Existing",
+            "creationType": "Existing",
+            "details": {
+                "displayName": "iPadIntuneConnector",
+                "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png"
+            },
+            "configurableBy": "User",
+            "hierarchy": "Child",
+            "dependsOn": []
+        },
+        "5b1c9eb8-758a-49b5-89a1-692e0e7374c2": {
+            "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+            "name": "shared_logicflows",
+            "type": "Microsoft.PowerApps/apis",
+            "suggestedCreationType": "Existing",
+            "details": {
+                "displayName": "Logic flows",
+                "iconUri": "https://resourcestackdeploy.blob.core.windows.net/scripts/13276078.png"
+            },
+            "configurableBy": "System",
+            "hierarchy": "Child",
+            "dependsOn": []
+        },
+        "fed4cbfa-dac7-45d1-bc39-f1322cb94db5": {
+            "type": "Microsoft.Flow/flows",
+            "suggestedCreationType": "New",
+            "creationType": "Existing, New, Update",
+            "details": {
+                "displayName": "iPadEnrollmentFlow"
+            },
+            "configurableBy": "User",
+            "hierarchy": "Child",
+            "dependsOn": [
+                "4760893c-1c4c-405c-81d1-e5259ec06d5f",
+                "914ce4a1-0661-44de-929e-bfd3e7627068"
+            ]
+        },
+        "914ce4a1-0661-44de-929e-bfd3e7627068": {
+            "type": "Microsoft.PowerApps/apis/connections",
+            "suggestedCreationType": "Existing",
+            "creationType": "Existing",
+            "details": {
+                "displayName": "",
+                "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png"
+            },
+            "configurableBy": "User",
+            "hierarchy": "Child",
+            "dependsOn": [
+                "4760893c-1c4c-405c-81d1-e5259ec06d5f"
+            ]
+        }
+    }
+}

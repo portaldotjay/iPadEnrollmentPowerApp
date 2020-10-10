@@ -1,0 +1,135 @@
+{
+    "name": "af8f8dc4-4369-4e6c-ac7b-85daf62ea397",
+    "id": "/providers/Microsoft.Flow/flows/af8f8dc4-4369-4e6c-ac7b-85daf62ea397",
+    "type": "Microsoft.Flow/flows",
+    "properties": {
+        "apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+        "displayName": "iPadEnrollmentFlow",
+        "definition": {
+            "metadata": {
+                "workflowEntityId": null,
+                "flowclientsuspensionreason": "None",
+                "flowclientsuspensiontime": null,
+                "creator": {
+                    "id": "",
+                    "type": "User",
+                    "tenantId": ""
+                },
+                "provisioningMethod": "FromDefinition",
+                "failureAlertSubscription": true,
+                "clientLastModifiedTime": "2020-10-10T01:00:17.7250549Z"
+            },
+            "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {
+                "$connections": {
+                    "defaultValue": {},
+                    "type": "Object"
+                },
+                "$authentication": {
+                    "defaultValue": {},
+                    "type": "SecureObject"
+                }
+            },
+            "triggers": {
+                "manual": {
+                    "type": "Request",
+                    "kind": "PowerApp",
+                    "inputs": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "AssignsDevicetoEnrollmentProfile_enrollmentProfileId": {
+                                    "type": "string",
+                                    "x-ms-powerflows-param-ispartial": false
+                                },
+                                "Compose_Inputs": {
+                                    "type": "any",
+                                    "description": "Inputs",
+                                    "x-ms-powerflows-param-ispartial": false
+                                }
+                            },
+                            "required": [
+                                "AssignsDevicetoEnrollmentProfile_enrollmentProfileId",
+                                "Compose_Inputs"
+                            ]
+                        }
+                    }
+                }
+            },
+            "actions": {
+                "Assigns_Device_to_Enrollment_Profile": {
+                    "runAfter": {
+                        "Compose": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                        "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_ipadintuneconnector-5f886cf859d4972969-5fd4587352b04c9c40",
+                            "connectionName": "shared_ipadintuneconnector-5f886cf859d4972969-5fd4587352b04c9c40",
+                            "operationId": "updateDeviceProfileAssignment"
+                        },
+                        "parameters": {
+                            "enrollmentProfileId": "@triggerBody()['AssignsDevicetoEnrollmentProfile_enrollmentProfileId']",
+                            "body": "@outputs('Compose')"
+                        },
+                        "authentication": {
+                            "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']",
+                            "type": "Raw"
+                        }
+                    }
+                },
+                "Compose": {
+                    "runAfter": {},
+                    "type": "Compose",
+                    "inputs": "@triggerBody()['Compose_Inputs']"
+                },
+                "Respond_to_a_PowerApp_or_flow": {
+                    "runAfter": {
+                        "Compose_2": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "Response",
+                    "kind": "PowerApp",
+                    "inputs": {
+                        "statusCode": 200,
+                        "body": {
+                            "status": "@{outputs('Compose_2')}"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "title": "status",
+                                    "x-ms-dynamically-added": true,
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "Compose_2": {
+                    "runAfter": {
+                        "Assigns_Device_to_Enrollment_Profile": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "Compose",
+                    "inputs": "@outputs('Assigns_Device_to_Enrollment_Profile')?['statusCode']"
+                }
+            }
+        },
+        "connectionReferences": {
+            "shared_ipadintuneconnector-5f886cf859d4972969-5fd4587352b04c9c40": {
+                "connectionName": "1beabf213b6443e2a650ebb046b04771",
+                "source": "Invoker",
+                "id": "/providers/Microsoft.PowerApps/apis/shared_ipadintuneconnector-5f886cf859d4972969-5fd4587352b04c9c40",
+                "tier": "NotSpecified"
+            }
+        },
+        "flowFailureAlertSubscribed": false
+    }
+}

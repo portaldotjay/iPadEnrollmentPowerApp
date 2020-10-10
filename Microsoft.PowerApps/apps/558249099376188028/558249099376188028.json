@@ -1,0 +1,140 @@
+{
+    "schemaVersion": "1.0",
+    "appDefinitionTemplate": {
+        "id": "/providers/Microsoft.PowerApps/apps/",
+        "type": "Microsoft.PowerApps/apps",
+        "tags": {
+            "primaryDeviceWidth": "1136",
+            "primaryDeviceHeight": "640",
+            "sienaVersion": "20201010T011301Z-3.20093.27.0",
+            "deviceCapabilities": "webcam",
+            "supportsPortrait": "true",
+            "supportsLandscape": "true",
+            "primaryFormFactor": "Phone",
+            "publisherVersion": "3.20093.27",
+            "minimumRequiredApiVersion": "2.2.0",
+            "hasComponent": "false",
+            "hasUnlockedComponent": "false",
+            "isUnifiedRootApp": "false"
+        },
+        "properties": {
+            "appVersion": "2020-10-10T01:13:01Z",
+            "lifeCycleId": "Published",
+            "createdByClientVersion": {
+                "major": 3,
+                "minor": 20093,
+                "build": 27,
+                "revision": 0,
+                "majorRevision": 0,
+                "minorRevision": 0
+            },
+            "minClientVersion": {
+                "major": 3,
+                "minor": 20093,
+                "build": 27,
+                "revision": 0,
+                "majorRevision": 0,
+                "minorRevision": 0
+            },
+            "backgroundColor": "rgba(0, 176, 240, 1)",
+            "backgroundImageUri": "/558249099376188028/N4886be53-5fc9-41ed-8d1f-b7d052cc75de-logoSmallFile",
+            "displayName": "iPad Pal",
+            "description": "",
+            "commitMessage": "",
+            "appUris": {
+                "documentUri": {
+                    "value": "/558249099376188028/Nc6f9873d-36fc-4776-ad37-499c49d9b825-document.msapp",
+                    "readonlyValue": "/558249099376188028/Nc6f9873d-36fc-4776-ad37-499c49d9b825-document.msapp"
+                },
+                "imageUris": []
+            },
+            "createdTime": "0001-01-01T00:00:00Z",
+            "lastModifiedTime": "0001-01-01T00:00:00Z",
+            "sharedGroupsCount": 0,
+            "sharedUsersCount": 0,
+            "icons": {
+                "smallIconUri": "/558249099376188028/N5ba4c995-90a5-4c8b-b3c9-09123459f106-small.png",
+                "mediumIconUri": "/558249099376188028/N629fd432-bbf0-40dd-8343-d5d96348e0ce-medium.png",
+                "largeIconUri": "/558249099376188028/N7897d5e0-6333-4188-a014-9477c7e0a1b8-large.png",
+                "wideIconUri": "/558249099376188028/N7a29d856-ffec-4a03-a4a6-67cffecf39fc-wide.png"
+            },
+            "connectionReferences": {
+                "78afb7b4-5b41-490f-aafc-0464753f72a7": {
+                    "id": "4760893c-1c4c-405c-81d1-e5259ec06d5f",
+                    "displayName": "iPadIntuneConnector",
+                    "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
+                    "dataSources": [
+                        "iPadIntuneConnector"
+                    ],
+                    "dependencies": [],
+                    "dependents": [
+                        "4ecd87b4-2cd4-44cf-badc-3dfa71ba1994"
+                    ],
+                    "parameterHints": {},
+                    "isOnPremiseConnection": false,
+                    "bypassConsent": false,
+                    "dataSets": {},
+                    "apiTier": "Standard",
+                    "isCustomApiConnection": true
+                },
+                "4ecd87b4-2cd4-44cf-badc-3dfa71ba1994": {
+                    "id": "5b1c9eb8-758a-49b5-89a1-692e0e7374c2",
+                    "displayName": "Logic flows",
+                    "iconUri": "https://resourcestackdeploy.blob.core.windows.net/scripts/13276078.png",
+                    "dataSources": [
+                        "iPadEnrollmentFlow"
+                    ],
+                    "dependencies": [
+                        "78afb7b4-5b41-490f-aafc-0464753f72a7"
+                    ],
+                    "dependents": [],
+                    "parameterHints": {
+                        "workflowName": {
+                            "value": "fed4cbfa-dac7-45d1-bc39-f1322cb94db5"
+                        },
+                        "78afb7b4-5b41-490f-aafc-0464753f72a7": {
+                            "value": "shared_ipadintuneconnector-5f886cf859d4972969-5fd4587352b04c9c40"
+                        }
+                    },
+                    "isOnPremiseConnection": false,
+                    "bypassConsent": false,
+                    "dataSets": {},
+                    "apiTier": "Standard",
+                    "isCustomApiConnection": false
+                }
+            },
+            "databaseReferences": {
+                "default.cds": {
+                    "databaseDetails": {
+                        "referenceType": "Environmental",
+                        "environmentName": "default.cds"
+                    },
+                    "dataSources": {
+                        "iPads": {
+                            "entitySetName": "cr86c_ipads",
+                            "logicalName": "cr86c_ipad"
+                        },
+                        "Users": {
+                            "entitySetName": "systemusers",
+                            "logicalName": "systemuser"
+                        },
+                        "Business Units": {
+                            "entitySetName": "businessunits",
+                            "logicalName": "businessunit"
+                        },
+                        "Teams": {
+                            "entitySetName": "teams",
+                            "logicalName": "team"
+                        }
+                    }
+                }
+            },
+            "almMode": "Environment",
+            "performanceOptimizationEnabled": true,
+            "canConsumeAppPass": true
+        },
+        "isAppComponentLibrary": false,
+        "appType": "ClassicCanvasApp",
+        "appComponents": []
+    }
+}
