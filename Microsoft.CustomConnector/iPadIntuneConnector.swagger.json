@@ -1,0 +1,407 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "iPadIntuneConnector",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "graph.microsoft.com",
+  "basePath": "/beta",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/deviceManagement/depOnboardingSettings/{depOnboardingSettingId}/enrollmentProfiles": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "@odata.count": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "@odata.count"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.type": {
+                        "type": "string",
+                        "description": "@odata.type"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "displayName": {
+                        "type": "string",
+                        "description": "displayName"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "description"
+                      },
+                      "requiresUserAuthentication": {
+                        "type": "boolean",
+                        "description": "requiresUserAuthentication"
+                      },
+                      "configurationEndpointUrl": {
+                        "type": "string",
+                        "description": "configurationEndpointUrl"
+                      },
+                      "enableAuthenticationViaCompanyPortal": {
+                        "type": "boolean",
+                        "description": "enableAuthenticationViaCompanyPortal"
+                      },
+                      "requireCompanyPortalOnSetupAssistantEnrolledDevices": {
+                        "type": "boolean",
+                        "description": "requireCompanyPortalOnSetupAssistantEnrolledDevices"
+                      },
+                      "isDefault": {
+                        "type": "boolean",
+                        "description": "isDefault"
+                      },
+                      "supervisedModeEnabled": {
+                        "type": "boolean",
+                        "description": "supervisedModeEnabled"
+                      },
+                      "supportDepartment": {
+                        "type": "string",
+                        "description": "supportDepartment"
+                      },
+                      "passCodeDisabled": {
+                        "type": "boolean",
+                        "description": "passCodeDisabled"
+                      },
+                      "isMandatory": {
+                        "type": "boolean",
+                        "description": "isMandatory"
+                      },
+                      "locationDisabled": {
+                        "type": "boolean",
+                        "description": "locationDisabled"
+                      },
+                      "supportPhoneNumber": {
+                        "type": "string",
+                        "description": "supportPhoneNumber"
+                      },
+                      "profileRemovalDisabled": {
+                        "type": "boolean",
+                        "description": "profileRemovalDisabled"
+                      },
+                      "restoreBlocked": {
+                        "type": "boolean",
+                        "description": "restoreBlocked"
+                      },
+                      "appleIdDisabled": {
+                        "type": "boolean",
+                        "description": "appleIdDisabled"
+                      },
+                      "termsAndConditionsDisabled": {
+                        "type": "boolean",
+                        "description": "termsAndConditionsDisabled"
+                      },
+                      "touchIdDisabled": {
+                        "type": "boolean",
+                        "description": "touchIdDisabled"
+                      },
+                      "applePayDisabled": {
+                        "type": "boolean",
+                        "description": "applePayDisabled"
+                      },
+                      "zoomDisabled": {
+                        "type": "boolean",
+                        "description": "zoomDisabled"
+                      },
+                      "siriDisabled": {
+                        "type": "boolean",
+                        "description": "siriDisabled"
+                      },
+                      "diagnosticsDisabled": {
+                        "type": "boolean",
+                        "description": "diagnosticsDisabled"
+                      },
+                      "displayToneSetupDisabled": {
+                        "type": "boolean",
+                        "description": "displayToneSetupDisabled"
+                      },
+                      "privacyPaneDisabled": {
+                        "type": "boolean",
+                        "description": "privacyPaneDisabled"
+                      },
+                      "screenTimeScreenDisabled": {
+                        "type": "boolean",
+                        "description": "screenTimeScreenDisabled"
+                      },
+                      "deviceNameTemplate": {
+                        "type": "string",
+                        "description": "deviceNameTemplate"
+                      },
+                      "configurationWebUrl": {
+                        "type": "boolean",
+                        "description": "configurationWebUrl"
+                      },
+                      "iTunesPairingMode": {
+                        "type": "string",
+                        "description": "iTunesPairingMode"
+                      },
+                      "restoreFromAndroidDisabled": {
+                        "type": "boolean",
+                        "description": "restoreFromAndroidDisabled"
+                      },
+                      "awaitDeviceConfiguredConfirmation": {
+                        "type": "boolean",
+                        "description": "awaitDeviceConfiguredConfirmation"
+                      },
+                      "sharedIPadMaximumUserCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "sharedIPadMaximumUserCount"
+                      },
+                      "enableSharedIPad": {
+                        "type": "boolean",
+                        "description": "enableSharedIPad"
+                      },
+                      "companyPortalVppTokenId": {
+                        "type": "string",
+                        "description": "companyPortalVppTokenId"
+                      },
+                      "enableSingleAppEnrollmentMode": {
+                        "type": "boolean",
+                        "description": "enableSingleAppEnrollmentMode"
+                      },
+                      "homeButtonScreenDisabled": {
+                        "type": "boolean",
+                        "description": "homeButtonScreenDisabled"
+                      },
+                      "iMessageAndFaceTimeScreenDisabled": {
+                        "type": "boolean",
+                        "description": "iMessageAndFaceTimeScreenDisabled"
+                      },
+                      "onBoardingScreenDisabled": {
+                        "type": "boolean",
+                        "description": "onBoardingScreenDisabled"
+                      },
+                      "simSetupScreenDisabled": {
+                        "type": "boolean",
+                        "description": "simSetupScreenDisabled"
+                      },
+                      "softwareUpdateScreenDisabled": {
+                        "type": "boolean",
+                        "description": "softwareUpdateScreenDisabled"
+                      },
+                      "watchMigrationScreenDisabled": {
+                        "type": "boolean",
+                        "description": "watchMigrationScreenDisabled"
+                      },
+                      "appearanceScreenDisabled": {
+                        "type": "boolean",
+                        "description": "appearanceScreenDisabled"
+                      },
+                      "expressLanguageScreenDisabled": {
+                        "type": "boolean",
+                        "description": "expressLanguageScreenDisabled"
+                      },
+                      "preferredLanguageScreenDisabled": {
+                        "type": "boolean",
+                        "description": "preferredLanguageScreenDisabled"
+                      },
+                      "deviceToDeviceMigrationDisabled": {
+                        "type": "boolean",
+                        "description": "deviceToDeviceMigrationDisabled"
+                      },
+                      "welcomeScreenDisabled": {
+                        "type": "boolean",
+                        "description": "welcomeScreenDisabled"
+                      },
+                      "managementCertificates": {
+                        "type": "array",
+                        "items": {},
+                        "description": "managementCertificates"
+                      },
+                      "registrationDisabled": {
+                        "type": "boolean",
+                        "description": "registrationDisabled"
+                      },
+                      "fileVaultDisabled": {
+                        "type": "boolean",
+                        "description": "fileVaultDisabled"
+                      },
+                      "iCloudDiagnosticsDisabled": {
+                        "type": "boolean",
+                        "description": "iCloudDiagnosticsDisabled"
+                      },
+                      "iCloudStorageDisabled": {
+                        "type": "boolean",
+                        "description": "iCloudStorageDisabled"
+                      },
+                      "chooseYourLockScreenDisabled": {
+                        "type": "boolean",
+                        "description": "chooseYourLockScreenDisabled"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "List properties and relationships of the enrollmentProfile objects.",
+        "parameters": [],
+        "operationId": "getEnrollmentProfiles",
+        "description": "List properties and relationships of the enrollmentProfile objects."
+      }
+    },
+    "/deviceManagement/depOnboardingSettings/{depOnboardingSettingId}/importedAppleDeviceIdentities/{serialNumber}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "serialNumber": {
+                  "type": "string",
+                  "description": "serialNumber"
+                },
+                "requestedEnrollmentProfileId": {
+                  "type": "string",
+                  "description": "requestedEnrollmentProfileId"
+                },
+                "requestedEnrollmentProfileAssignmentDateTime": {
+                  "type": "string",
+                  "description": "requestedEnrollmentProfileAssignmentDateTime"
+                },
+                "isSupervised": {
+                  "type": "boolean",
+                  "description": "isSupervised"
+                },
+                "discoverySource": {
+                  "type": "string",
+                  "description": "discoverySource"
+                },
+                "isDeleted": {
+                  "type": "boolean",
+                  "description": "isDeleted"
+                },
+                "createdDateTime": {
+                  "type": "string",
+                  "description": "createdDateTime"
+                },
+                "lastContactedDateTime": {
+                  "type": "string",
+                  "description": "lastContactedDateTime"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                },
+                "enrollmentState": {
+                  "type": "string",
+                  "description": "enrollmentState"
+                },
+                "platform": {
+                  "type": "string",
+                  "description": "platform"
+                }
+              }
+            }
+          }
+        },
+        "summary": "The importedAppleDeviceIdentityResult resource represents the result of attempting to import Apple devices identities.",
+        "description": "The importedAppleDeviceIdentityResult resource represents the result of attempting to import Apple devices identities.",
+        "operationId": "getImportedAppleDeviceIdentities",
+        "parameters": [
+          {
+            "name": "serialNumber",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/deviceManagement/depOnboardingSettings/{depOnboardingSettingId}/enrollmentProfiles/{enrollmentProfileId}/updateDeviceProfileAssignment": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "operationId": "updateDeviceProfileAssignment",
+        "summary": "Assigns Device to Enrollment Profile",
+        "description": "Assigns Device to Enrollment Profile",
+        "parameters": [
+          {
+            "name": "enrollmentProfileId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "required": [
+                "deviceIds"
+              ],
+              "title": "Device IDs"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {
+        "./default": "./default"
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": [
+        "./default"
+      ]
+    }
+  ],
+  "tags": []
+}
